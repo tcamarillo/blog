@@ -4,6 +4,11 @@ theme = "xmin"
 languageCode = "en"
 defaultContentLanguage = "en"
 
+[module]
+  [[module.mounts]]
+    source = "_partials"
+    target = "layouts/partials"
+
 enableEmoji = true
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".*test_*"]
