@@ -1,0 +1,21 @@
+{{ define "main" }}
+<main>
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+  <div class="posts-grid">
+    {{/* Use .Pages for current section or site.GetPage for cross-section */}}
+    {{ $posts := where site.RegularPages "Section" "posts" }}
+    {{ range $posts.ByDate.Reverse }}
+    <article class="post">
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date | time.Format (site.Params.dateFormat | default "January 2, 2006") }}
+      </time>
+      {{ with .Description }}<p>{{ . }}</p>{{ else }}<p>{{ .Summary }}</p>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+</main>
+{{ end }}
