@@ -1,0 +1,13 @@
+{{/*
+  Site override of hugo-coder's stock home/author.html: the stock version's
+  else-branch renders <h2>{{ .Site.Params.info | markdownify }}</h2>
+  unconditionally, which with no `info` param set (no tagline wanted)
+  leaves a stray empty <h2></h2> in the markup. This just adds a truthy
+  check before rendering it.
+*/}}
+<h1>{{ .Site.Params.author }}</h1>
+{{ if reflect.IsSlice .Site.Params.info }}
+<h2>{{ range .Site.Params.info }}{{ . | markdownify }}<br>{{ end}}</h2>
+{{ else if .Site.Params.info }}
+<h2>{{ .Site.Params.info | markdownify }}</h2>
+{{ end }}
