@@ -2,7 +2,7 @@
 title = "About"
 description = "A human Software Engineer navigating this complex world"
 date = "2024-05-02"
-aliases = ["about", "about-me", "/"]
+aliases = ["about", "about-me"]
 author = "author_name"
 +++
 

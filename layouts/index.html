@@ -1,0 +1,19 @@
+{{/*
+  The site root ("/") can't use Hugo's `aliases` front matter to redirect
+  to the About page — Hugo rejects "/" as an alias target because it
+  collides with the home page itself (build error: "alias / resolves to
+  website root directory"). Overriding the home template instead lets us
+  emit a redirect page at "/" that forwards to the About page, per
+  language.
+*/}}
+{{ $about := .Site.GetPage "/about" }}
+<!DOCTYPE html>
+<html lang="{{ $about.Lang }}">
+<head>
+  <title>{{ $about.Title }}</title>
+  <link rel="canonical" href="{{ $about.Permalink }}"/>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ $about.Permalink }}">
+</head>
+</html>
