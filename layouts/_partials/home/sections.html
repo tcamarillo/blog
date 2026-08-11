@@ -1,0 +1,13 @@
+{{/*
+  hugo-coder's home page (layouts/_partials/home.html) only renders the
+  avatar/author/social profile card by default; it never outputs the
+  page's own .Content. This override fills the theme's own designated
+  extension point (see the stock version of this file) so content/_index.md
+  (and its future per-language translations, added on request) still shows
+  up beneath the profile card.
+*/}}
+{{ with .Content }}
+<section class="container centered">
+  {{ . }}
+</section>
+{{ end }}

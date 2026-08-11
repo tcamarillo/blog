@@ -1,15 +1,18 @@
 baseURL = "https://www.base_url.com/"
 title = "Author Name"
-theme = "xmin"
+theme = "coder"
 languageCode = "en"
 defaultContentLanguage = "en"
 
 enableEmoji = true
 
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", ".*test_*"]
-
 [pagination]
   pagerSize = 6
+
+[services]
+[services.disqus]
+# Enable Disqus comments
+# shortname = "yourdiscussshortname"
 
 [markup.highlight]
 noClasses = false
@@ -18,9 +21,23 @@ noClasses = false
 unsafe = true
 
 [params]
+author = "Author Name"
 description = "Author Name's personal website"
+keywords = "software,engineer,developer,personal,presentation"
+info = ["Software Engineer"]
 email = "email@example.com"
-footer = "&copy; [Author Name](https://github.com/author_name) 2024 -- {Year} | Powered by [Hugo](https://gohugo.io)"
+dateFormat = "January 2, 2006"
+since = 2024
+rtl = false
+# "auto" follows the visitor's OS/browser preference; the toggle button lets
+# them override it by hand (persisted via the theme's own JS).
+colorScheme = "auto"
+hideColorSchemeToggle = false
+maxSeeAlsoItems = 5
+customCSS = ["css/custom.css"]
+customSCSS = []
+customJS = []
+customRemoteJS = []
 
 [taxonomies]
 category = "categories"
@@ -28,32 +45,47 @@ series = "series"
 tag = "tags"
 author = "authors"
 
+[[params.social]]
+name = "Github"
+icon = "fa-brands fa-github fa-2x"
+weight = 1
+url = "https://github.com/author_name/"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa-brands fa-linkedin fa-2x"
+weight = 2
+url = "https://www.linkedin.com/in/author_name/"
+
+[[params.social]]
+name = "RSS"
+icon = "fa-solid fa-rss fa-2x"
+weight = 3
+url = "https://me.author_name.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
+
 [languages.en]
 languageName = ":us:"
 
 [[languages.en.menu.main]]
-name = "Home"
-weight = 1
-url = ""
-
-[[languages.en.menu.main]]
 name = "About"
-weight = 2
+weight = 1
 url = "about/"
 
 [[languages.en.menu.main]]
 name = "Posts"
-weight = 3
+weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
 name = "Tags"
-weight = 4
+weight = 3
 url = "tags/"
 
 [[languages.en.menu.main]]
 name = "Contact Me"
-weight = 5
+weight = 4
 url = "contact/"
 
 [languages.pt-br]
@@ -61,29 +93,27 @@ languageName = ":brazil:"
 title = "Author Name"
 
 [languages.pt-br.params]
+author = "Author Name"
+info = "Software Engineer"
 description = "Site pessoal de Author Name"
-
-[[languages.pt-br.menu.main]]
-name = "Início"
-weight = 1
-url = ""
+keywords = "software,engineer,developer,pessoal,apresentacao"
 
 [[languages.pt-br.menu.main]]
 name = "Sobre"
-weight = 2
+weight = 1
 url = "about/"
 
 [[languages.pt-br.menu.main]]
 name = "Publicações"
-weight = 3
+weight = 2
 url = "posts/"
 
 [[languages.pt-br.menu.main]]
 name = "Tags"
-weight = 4
+weight = 3
 url = "tags/"
 
 [[languages.pt-br.menu.main]]
 name = "Contato"
-weight = 5
+weight = 4
 url = "contact/"

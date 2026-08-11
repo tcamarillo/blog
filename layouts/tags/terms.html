@@ -1,20 +1,31 @@
-{{ partial "header.html" . }}
-
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-
-{{ range .Pages.ByTitle }}
-<section class="tag-group">
-  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})</h2>
-  <ul>
-    {{ range .Pages.ByDate.Reverse }}
-    <li>
-      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-  </ul>
+{{/*
+  Site-specific override of the tags taxonomy list page. hugo-coder's own
+  terms.html (see themes/coder/layouts/terms.html and _partials/terms.html)
+  only lists tag names with counts, linking out to each tag's own page.
+  This version shows every tag with its posts inline, on one page, as
+  requested - reusing the theme's own CSS classes for visual consistency.
+*/}}
+{{ define "title" }}
+  {{- i18n (lower .Title) | default .Title | title }} · {{ .Site.Title -}}
+{{ end }}
+{{ define "content" }}
+<section class="container taxonomy">
+  <header>
+    <h1 class="title">{{ .Title }}</h1>
+  </header>
+  {{ .Content }}
+  {{ range .Pages.ByTitle }}
+  <section class="tag-group">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> <sup>{{ len .Pages }}</sup></h2>
+    <ul>
+      {{ range .Pages.ByDate.Reverse }}
+      <li>
+        <span class="date">{{ .Date | time.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</span>
+        <a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
 </section>
 {{ end }}
-
-{{ partial "footer.html" . }}
