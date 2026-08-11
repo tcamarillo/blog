@@ -78,4 +78,4 @@ This project uses custom domains for personal branding and organization.
 
 This README provides a general overview of the project setup and deployment. For more detailed instructions, please refer to the official Hugo documentation and GitHub Pages guidelines.
 
-Thank you for visiting this repository, and happy coding!
+Thank you for visiting this repository, and happy coding!!
