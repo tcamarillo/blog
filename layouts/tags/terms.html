@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+
+{{ range .Pages.ByTitle }}
+<section class="tag-group">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})</h2>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+    <li>
+      <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}
