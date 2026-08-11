@@ -6,6 +6,12 @@ defaultContentLanguage = "en"
 
 enableEmoji = true
 
+# Drives .Lastmod from each content file's actual git history (instead of
+# falling back to .Date) - see layouts/posts/single.html's "Last updated".
+# The deploy workflow already does a full-history checkout (fetch-depth: 0)
+# so this works in CI as-is.
+enableGitInfo = true
+
 [pagination]
   pagerSize = 6
 

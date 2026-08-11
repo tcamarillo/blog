@@ -18,3 +18,20 @@ code,
 pre {
   font-family: "Lucida Console", Monaco, monospace;
 }
+
+/*
+ * The home page's intro text (content/_index.md, rendered via
+ * layouts/_partials/home/sections.html) used plain .container, which
+ * stretches to the same 90rem width as every other page's body text.
+ * But the profile card right above it (avatar/social icons) is a narrow,
+ * centered column by the theme's own design - so the two blocks visually
+ * mismatched (text's right edge sat well past the profile card's edge).
+ * This centers that block at a comfortable reading width instead, so it
+ * lines up with the profile card above it. max-width + margin: auto is
+ * fluid by nature - no breakpoints needed, it just re-centers itself at
+ * any viewport width.
+ */
+.home-content {
+  max-width: 50rem;
+  margin: 0 auto;
+}

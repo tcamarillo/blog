@@ -1,5 +1,4 @@
 +++
-authors = ["author_name"]
 title = "Emoji Support"
 date = "2023-07-07"
 description = "Guide to emoji usage in Hugo"
