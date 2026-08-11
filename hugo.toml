@@ -1,5 +1,5 @@
 baseURL = "https://www.base_url.com/"
-title = "Author Name"
+title = "Tia Camarillo"
 theme = "coder"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -21,10 +21,10 @@ noClasses = false
 unsafe = true
 
 [params]
-author = "Author Name"
-description = "Author Name's personal website"
+author = "Tia Camarillo"
+description = "Tia Camarillo's personal website"
 keywords = "software,engineer,developer,personal,presentation"
-info = ["Software Engineer"]
+avatarURL = "https://github.com/tcamarillo.png"
 email = "email@example.com"
 dateFormat = "January 2, 2006"
 since = 2024
@@ -49,19 +49,23 @@ author = "authors"
 name = "Github"
 icon = "fa-brands fa-github fa-2x"
 weight = 1
-url = "https://github.com/author_name/"
+url = "https://github.com/tcamarillo/"
 
 [[params.social]]
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 2
-url = "https://www.linkedin.com/in/author_name/"
+url = "https://www.linkedin.com/in/tia-solveigcreamos/"
 
 [[params.social]]
 name = "RSS"
 icon = "fa-solid fa-rss fa-2x"
 weight = 3
-url = "https://me.author_name.com/index.xml"
+# Relative, not a hardcoded domain: this only ever renders on the home
+# page, so it resolves against wherever that page is actually served
+# (works under the GitHub Pages /blog/ subpath now, and under tlc.moi
+# later without needing to touch this).
+url = "index.xml"
 rel = "alternate"
 type = "application/rss+xml"
 
@@ -90,12 +94,11 @@ url = "contact/"
 
 [languages.pt-br]
 languageName = ":brazil:"
-title = "Author Name"
+title = "Tia Camarillo"
 
 [languages.pt-br.params]
-author = "Author Name"
-info = "Software Engineer"
-description = "Site pessoal de Author Name"
+author = "Tia Camarillo"
+description = "Site pessoal de Tia Camarillo"
 keywords = "software,engineer,developer,pessoal,apresentacao"
 
 [[languages.pt-br.menu.main]]

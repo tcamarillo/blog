@@ -5,9 +5,14 @@
   extension point (see the stock version of this file) so content/_index.md
   (and its future per-language translations, added on request) still shows
   up beneath the profile card.
+
+  Note: uses plain "container", not "container centered". ".centered" is
+  display:flex with no flex-direction set, meant for the single .about div
+  in the profile card above. Reused here it turned every heading/paragraph
+  in .Content into a horizontal flex row instead of stacking them.
 */}}
 {{ with .Content }}
-<section class="container centered">
+<section class="container">
   {{ . }}
 </section>
 {{ end }}
