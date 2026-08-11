@@ -31,7 +31,6 @@ author = "Tia Camarillo"
 description = "Tia Camarillo's personal website"
 keywords = "software,engineer,developer,personal,presentation"
 avatarURL = "https://github.com/tcamarillo.png"
-email = "email@example.com"
 dateFormat = "January 2, 2006"
 since = 2024
 rtl = false
