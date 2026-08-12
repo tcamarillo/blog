@@ -29,7 +29,7 @@ unsafe = true
 [params]
 author = "Tia Camarillo"
 description = "Tia Camarillo's personal website"
-keywords = "software,engineer,developer,personal,presentation"
+keywords = "ba,pm,analyst,personal,presentation"
 avatarURL = "https://github.com/tcamarillo.png"
 dateFormat = "January 2, 2006"
 since = 2024
@@ -104,7 +104,7 @@ title = "Tia Camarillo"
 [languages.pt-br.params]
 author = "Tia Camarillo"
 description = "Site pessoal de Tia Camarillo"
-keywords = "software,engineer,developer,pessoal,apresentacao"
+keywords = "ba,pm,analista,pessoal,apresentacao"
 
 [[languages.pt-br.menu.main]]
 name = "Sobre"
