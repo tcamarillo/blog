@@ -76,6 +76,7 @@ type = "application/rss+xml"
 
 [languages.en]
 languageName = ":us:"
+weight = 1
 
 [[languages.en.menu.main]]
 name = "About"
@@ -99,6 +100,7 @@ url = "contact/"
 
 [languages.pt-br]
 languageName = ":brazil:"
+weight = 2
 title = "Tia Camarillo"
 
 [languages.pt-br.params]

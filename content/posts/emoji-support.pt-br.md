@@ -1,5 +1,4 @@
 +++
-authors = ["tia-camarillo"]
 title = "Suporte a Emojis"
 date = "2024-06-09"
 description = "Um guia de utilização de emojis com Hugo"
